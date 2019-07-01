@@ -1,0 +1,11 @@
+<nb-card [nbSpinner]="loading" nbSpinnerStatus="danger">
+  <nb-list nbInfiniteList listenWindowScroll [threshold]="500" (bottomThreshold)="loadNext()">
+    <nb-list-item *ngFor="let item of itemsShow">
+      <nb-user size="giant" [name]="item.name" [title]="item.title" [picture]="item?.picture">
+      </nb-user>
+    </nb-list-item>
+    <nb-list-item *ngFor="let _ of placeholders">
+      <nb-user size="giant" [name]="'Loading...'"></nb-user>
+    </nb-list-item>
+  </nb-list>
+</nb-card>

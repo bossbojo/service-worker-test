@@ -1,0 +1,21 @@
+<form [formGroup]="form">
+  <nb-card>
+    <nb-card-body class="example-items-col" style="text-align: center;">
+      <img
+        [src]="this.form.value.picture?this.form.value.picture:'https://angular.io/assets/images/logos/angular/logo-nav@2x.png'"
+        width="100%">
+    </nb-card-body>
+    <nb-card-body class="example-items-col">
+      <input type="text" formControlName="picture" nbInput fullWidth shape="round" placeholder="URL Image">
+    </nb-card-body>
+    <nb-card-body class="example-items-col">
+      <input type="text" formControlName="name" nbInput fullWidth shape="round" placeholder="Full name">
+    </nb-card-body>
+    <nb-card-body class="example-items-col">
+      <input type="text" formControlName="title" nbInput fullWidth shape="round" placeholder="Title job">
+    </nb-card-body>
+    <nb-card-body class="example-items-col">
+      <button nbButton fullWidth status="primary" (click)="OnSubmit()">Create Employee</button>
+    </nb-card-body>
+  </nb-card>
+</form>
