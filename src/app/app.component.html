@@ -8,9 +8,9 @@
   </nb-layout-header>
 
   <nb-layout-column>
-
-    <router-outlet></router-outlet>
-
+    <div [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
   </nb-layout-column>
 
   <nb-layout-footer fixed>

@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: 'employee',
-    loadChildren: () => import('./pages/employee/employee.module').then(m => m.EmployeeModule)
+    loadChildren: () => import('./pages/employee/employee.module').then(m => m.EmployeeModule),
+    data: { animation: 'employee' }
   },
   {
     path: 'employee-create',
-    loadChildren: () => import('./pages/employee-create/employee-create.module').then(m => m.EmployeeCreateModule)
+    loadChildren: () => import('./pages/employee-create/employee-create.module').then(m => m.EmployeeCreateModule),
+    data: { animation: 'employee-create' }
   },
   {
     path: 'employee-edit',
